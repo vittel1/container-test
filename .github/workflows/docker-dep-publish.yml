@@ -4,6 +4,9 @@ on:
   release:
     types: [published, edited]
 
+    tags:
+      - v*
+
 env:
   IMAGE_NAME: test-dep
 

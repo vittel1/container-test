@@ -1,12 +1,10 @@
-name: Docker Configuration Build
+name: Docker-Configuration-Build
 
 on:
   push:
-    # Publish `master` as Docker `latest` image.
     branches:
       - master
 
-    # Publish `v1.2.3` tags as releases.
     tags:
       - v*
 
@@ -14,8 +12,6 @@ env:
   IMAGE_NAME: test-conf
 
 jobs:
-  # Push image to GitHub Packages.
-  # See also https://docs.docker.com/docker-hub/builds/
   push:
     runs-on: ubuntu-latest
 

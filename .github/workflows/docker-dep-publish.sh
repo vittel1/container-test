@@ -1,14 +1,8 @@
-name: Docker Dependencies Build
+name: Docker-Dependencies-Build
 
 on:
   release:
-    # Publish `master` as Docker `latest` image.
-    branches:
-      - master
-
-    # Publish `v1.2.3` tags as releases.
-    tags:
-      - v*
+    types: [published, edited]
 
 env:
   IMAGE_NAME: test-dep

@@ -1,4 +1,3 @@
-FROM ubuntu:latest
+FROM ghcr.io/vittel1/test-dep:latest
 
-RUN apt-get update
-RUN apt-get install -y python3
+RUN python3 --version

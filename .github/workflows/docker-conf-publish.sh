@@ -1,4 +1,4 @@
-name: Docker
+name: Docker Configuration Build
 
 on:
   push:
@@ -10,19 +10,14 @@ on:
     tags:
       - v*
 
-  # Run tests for any PRs.
-  pull_request:
-
 env:
-  # TODO: Change variable to your image's name.
-  IMAGE_NAME: easy
+  IMAGE_NAME: test-conf
 
 jobs:
   # Push image to GitHub Packages.
   # See also https://docs.docker.com/docker-hub/builds/
   push:
     runs-on: ubuntu-latest
-    if: github.event_name == 'push'
 
     steps:
       - uses: actions/checkout@v2
